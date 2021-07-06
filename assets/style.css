@@ -1,1 +1,5 @@
 #title {text-align: center;}
+
+input, textarea {
+    width: 200px;
+}
