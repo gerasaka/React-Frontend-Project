@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">MUSICLE</h1>
+    <h1>Create Playlist</h1>
+
+    <form name="create-playlist">
+        <label for="form-title">Title</label><br>
+        <input type="text" id="form-title"><br><br>
+        <label for="form-desc">Description</label><br>
+        <textarea name="" id="form-desc" rows="2"></textarea><br>
+        <input type="submit" value="Create" onclick="createBtn();"><br><br>
+    </form>
+
+    <div>
+        <img src="assets/placeholder.jpg" alt="Playlist image placeholder">
+        <p>Title</p>
+        <p>Artist</p>
+        <p>Album</p>
+        <button>Listen</button>
+    </div>
+
+    <script>
+        function createBtn(){
+            alert(`Playlist ${document.getElementById('form-title').value} created!`);
+        }
+    </script>
+</body>
+</html>
