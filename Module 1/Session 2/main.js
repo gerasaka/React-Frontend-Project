@@ -26,7 +26,7 @@ const renderSongData = (data) => {
         <p>${artists[0].name}<p><br>
         <p>Album </p>
         <p>${album.name}</p><br>
-        <button" type="button">
+        <button onclick="location.href='${external_urls.spotify}'" type="button">
         Listen on Spotify</button>
         `;
 
