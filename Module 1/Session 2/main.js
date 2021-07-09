@@ -11,7 +11,28 @@ async function getSongDetail(url) {
     let response = await fetch(url);
     let data = await response.json();
     console.log(`API response = ${response.status}, ok = ${response.ok}`);
+    // console.log(data);
     return data;
+}
+
+const renderSongData = (data) => {
+    const { name, artists, album, external_urls } = data;
+
+    let song = 
+        `<img src="${album.images[2].url}" alt="Album cover"><br>
+        <p>Title </p>
+        <p>${name}<p><br>
+        <p>Artists </p>
+        <p>${artists[0].name}<p><br>
+        <p>Album </p>
+        <p>${album.name}</p><br>
+        <button" type="button">
+        Listen on Spotify</button>
+        `;
+
+    const container = document.getElementsByClassName("container")[0];
+
+    container.innerHTML = song;
 }
 
 getSongDetail(detailSongUrl) 
